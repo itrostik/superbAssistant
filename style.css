@@ -93,12 +93,6 @@ header{
   color: #000000;
 }
 
-.button__link:active .button{
-  background: linear-gradient(0deg, #00FF29, #00FF29), linear-gradient(180deg, #A336F1 0%, rgba(0, 0, 0, 0) 100%), #992CE8;
-  background-blend-mode: hue, normal, normal;
-  border-radius: 28px;
-}
-
 .buttons{
   display: flex;
   flex-direction: column;
@@ -118,4 +112,16 @@ header{
   font-size: 17px;
   line-height: 24px;
   color: #FFFFFF;
+}
+
+.button__link:active .button{
+  background: linear-gradient(0deg, #00FF29, #00FF29), linear-gradient(180deg, #A336F1 0%, rgba(0, 0, 0, 0) 100%), #992CE8;
+  background-blend-mode: hue, normal, normal;
+  border-radius: 28px;
+}
+
+.active{
+  background: linear-gradient(0deg, #00FF29, #00FF29), linear-gradient(180deg, #A336F1 0%, rgba(0, 0, 0, 0) 100%), #992CE8;
+  background-blend-mode: hue, normal, normal;
+  border-radius: 28px;
 }
