@@ -79,6 +79,7 @@ header{
 /* Стили для главной страницы и для доски объявлений */
 
 .noticeboard{
+  max-width: 970px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -133,11 +134,12 @@ header{
 /* Стили для страницы с расписанием */
 
 .schedule{
+  max-width: 970px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 25px;
 }
 
 .schedule__title{
@@ -151,7 +153,7 @@ header{
 .schedule__body{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 10px repeat(6, 1fr);
+  grid-template-rows: 5px repeat(6, 1fr);
   gap: 20px;
 }
 
