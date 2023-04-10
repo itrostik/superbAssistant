@@ -79,7 +79,7 @@ header{
 /* Стили для главной страницы и для доски объявлений */
 
 .noticeboard{
-  max-width: 970px;
+  padding: 20px 10px 70px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -91,14 +91,13 @@ header{
   font-size: 40px;
   line-height: 50px;
   color: #6700B8;
-  padding: 20px 0;
+  padding: 0 0 20px 0;
 }
 
 .noticeboard__body{
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 0 98px 100px;
 }
 
 .noticeboard__infoblock{
@@ -134,7 +133,6 @@ header{
 /* Стили для страницы с расписанием */
 
 .schedule{
-  max-width: 970px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,9 +160,10 @@ header{
 }
 
 .schedule__infoblock-name{
+  padding: 0 15px;
   text-align: center;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .schedule__infoblock-date{
