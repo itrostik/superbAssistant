@@ -2,76 +2,57 @@
 
 @import "nullstyle.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
 *{
-  font-family: 'Mulish', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
   overflow: hidden;
   min-height: 100%;
-  background-color: #F5E7FF;
+  background: #110019;
 }
 .__container{
-  max-width: 1169px;
+  width: 1280px;
   margin: 0 auto;
-  padding: 0 5px;
 }
 header{
-  padding: 5px 0;
-  background-color: #fff;
-  border-bottom: 1px solid #000000;
+  padding: 33px 0px;
+  background: #52057B;
   margin: 0 0 24px 0;
 }
 
-.header__container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__text{
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 25px;
-}
 
-.main__container{
-  display: flex;
-  gap: 21px;
-}
 
 .buttons{
+  padding: 0 5px;
   display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-.button{
-  display: flex;
-  background: linear-gradient(180deg, #A336F1 0%, rgba(0, 0, 0, 0) 100%), #992CE8;
-  border-radius: 28px;
-  max-width: 178px;
-  height: 55px;
-  padding: 12px;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  gap: 42px;
+}
+.button__link{
+  display: block;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #BC6FF1;
+  transition: color 1s;
+
 }
 
-.button__link:active .button{
-  background: linear-gradient(0deg, #00FF29, #00FF29), linear-gradient(180deg, #A336F1 0%, rgba(0, 0, 0, 0) 100%), #992CE8;
-  background-blend-mode: hue, normal, normal;
-  border-radius: 28px;
+.button__link:hover{
+  color: #ffffff;
 }
+
 
 .active{
-  background: linear-gradient(0deg, #00FF29, #00FF29), linear-gradient(180deg, #A336F1 0%, rgba(0, 0, 0, 0) 100%), #992CE8;
-  background-blend-mode: hue, normal, normal;
-  border-radius: 28px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
 }
 
 /*-----------------------------------------------------------*/
@@ -79,35 +60,39 @@ header{
 /* Стили для главной страницы и для доски объявлений */
 
 .noticeboard{
-  padding: 20px 10px 70px;
-  background-color: #fff;
+  width: 1280px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 40px;
 
 }
-.noticeboard__title{
+
+
+.noticeboard__add{
+  display: block;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  color: #6700B8;
-  padding: 0 0 20px 0;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 20px 30px;
+  border: 4px solid #FFFFFF;
+  border-radius: 20px;
 }
 
-.noticeboard__body{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
 .noticeboard__infoblock{
-  background-color: #EBEBEB;
+  width: 1280px;
+  background: #66139F;
+  border-radius: 20px;
+  padding: 20px 50px;
 }
 
 .noticeboard__infoblock-header{
-  padding: 10px;
+  padding: 10px 0 20px 0;
   color: #000000;
-  border-bottom: 1px solid #000000;
+  border-bottom: 2px solid #BC6FF1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,68 +101,49 @@ header{
 
 .noticeboard__infoblock-title{
   font-weight: 700;
-  font-size: 25px;
-  line-height: 31px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
 }
 
+.noticeboard__infoblock-date{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+
 .noticeboard__infoblock-text{
-  line-height: 18px;
-  padding: 5px;
-  color: #000000;
+  padding: 25px 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.noticeboard__infoblock-buttons{
+  display: flex;
+  gap: 20px;
+}
+.noticeboard__infoblock-button{
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.edit{
+  border: 2px solid #FFFFFF;
+  color: #ffffff;
+}
+
+.delete{
+  color: #FF4646;
+  border: 2px solid #FF4646;
 }
 
 /*--------------------------------------------*/
 
-
-
-/* Стили для страницы с расписанием */
-
-.schedule{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  padding: 10px 25px;
-}
-
-.schedule__title{
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  color: #6700B8;
-  padding: 0 0 20px 0;
-}
-
-.schedule__body{
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 5px repeat(6, 1fr);
-  gap: 20px;
-}
-
-.schedule__infoblock{
-  border: 1px solid #000000;
-}
-
-.schedule__infoblock-name{
-  padding: 0 15px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-.schedule__infoblock-date{
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  color: #000000;
-  border-bottom: 1px solid #000000;
-}
-.schedule__infoblock-text{
-  padding: 50px 5px;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  color: #000000;
-}
