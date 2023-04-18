@@ -29,7 +29,7 @@ header{
   padding: 0 5px;
   display: flex;
   align-items: center;
-  gap: 42px;
+  justify-content: space-between;
 }
 .button__link{
   display: block;
