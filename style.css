@@ -11,10 +11,10 @@
 .wrapper {
   overflow: hidden;
   min-height: 100%;
-  background: #110019;
+  background: url("img/bg.svg") 0 0/50px 50px;
 }
 .__container{
-  width: 1280px;
+  width: 1216px;
   margin: 0 auto;
 }
 header{
@@ -60,7 +60,7 @@ header{
 /* Стили для главной страницы и для доски объявлений */
 
 .noticeboard{
-  width: 1280px;
+  width: 1216px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,11 +79,12 @@ header{
   padding: 20px 30px;
   border: 4px solid #FFFFFF;
   border-radius: 20px;
+  background-color: #110019;
 }
 
 
 .noticeboard__infoblock{
-  width: 1280px;
+  width: 1216px;
   background: #66139F;
   border-radius: 20px;
   padding: 20px 50px;
