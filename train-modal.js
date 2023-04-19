@@ -3,6 +3,7 @@ let modal = document.querySelector('.modal');
 $btn.addEventListener('click', openModal);
 
 function openModal() {
+  document.querySelector('.modal__title').textContent = 'НОВЫЙ МАТЕРИАЛ';
   document.querySelector('.modal__btn').value = "ДОБАВИТЬ";
   document.querySelector('.modal__input-name').value = '';
   document.querySelector('.modal__input-link').value = '';
@@ -15,7 +16,7 @@ function openModal() {
     let link = document.querySelector('.modal__input-link').value;
     let name = document.querySelector('.modal__input-name').value;
     if (link && name) {
-
+      notify('материал создан')
       let cell = document.createElement('div');
       cell.classList.add("train-material__cell");
 
@@ -34,6 +35,8 @@ function openModal() {
       cell.querySelector('.btn-change').addEventListener('click', openModalChange);
       cell.querySelector('.btn-cancel').addEventListener('click', deleteCell);
       document.querySelector('.train-material__container').append(cell);
+    } else {
+      notify('невозможно создать пустой материал')
     }
 
     close();
@@ -56,6 +59,7 @@ btnChange.forEach((btn) => {
 
 function openModalChange(e) {
   let parent = e.target.closest('.train-material__cell');
+  document.querySelector('.modal__title').textContent = 'ИЗМЕНИТЬ МАТЕРИАЛ';
   document.querySelector('.modal__btn').value = "ИЗМЕНИТЬ";
   document.querySelector('.modal__input-name').value = parent.querySelector('.train-material__title').textContent.trim();
   document.querySelector('.modal__input-link').value = parent.querySelector('.train-material__link').textContent.trim();
@@ -69,8 +73,10 @@ function openModalChange(e) {
     let name = document.querySelector('.modal__input-name').value;
     let link = document.querySelector('.modal__input-link').value;
     if (name === '' || link === '') {
+      notify('материал удален');
       parent.remove();
     } else {
+      notify('материал изменен');
       parent.querySelector('.train-material__title').textContent = name;
       parent.querySelector('.train-material__link').textContent = link;
       parent.querySelector('.train-material__link').href = 'https://' + link;
@@ -87,6 +93,7 @@ btnCancel.forEach((btn) => {
 
 function deleteCell(e) {
   let parent = e.target.closest('.train-material__cell');
+  notify('материал удален');
   parent.remove();
 }
 
@@ -104,4 +111,14 @@ function close() {
     document.querySelector('.modal__overlay').classList.add('animate__fadeIn');
     document.querySelector('.modal__content').classList.add('animate__backInDown');
   }, 500);
+}
+
+
+function notify(string) {
+  let notification = document.querySelector('.notification');
+  notification.textContent = string;
+  notification.style.transform = 'translateX(0)'
+  setTimeout(() => {
+    notification.style.transform = ''
+  }, 2000)
 }
