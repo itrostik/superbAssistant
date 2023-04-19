@@ -18,14 +18,14 @@
   margin: 0 auto;
 }
 header{
-  padding: 33px 0;
   background: #52057B;
   margin: 0 0 40px 0;
+  padding: 35px 0;
   height: 100px;
-
 }
 
 .header__container{
+  height: 24px;
   padding: 0 5px;
   display: flex;
   align-items: center;
