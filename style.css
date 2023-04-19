@@ -21,39 +21,34 @@ header{
   padding: 33px 0;
   background: #52057B;
   margin: 0 0 40px 0;
+  height: 100px;
+
 }
 
-
-
-.buttons{
+.header__container{
   padding: 0 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.button__link{
+
+
+
+.header__link{
   display: block;
   font-weight: 700;
   font-size: 20px;
-  line-height: 24px;
   color: #BC6FF1;
-  transition: color 1s;
-
-}
-
-.button__link:hover{
-  color: #ffffff;
+  transition: all 0.2s ease-in-out;
 }
 
 
-.active{
-  font-weight: 700;
+.header__selected{
   font-size: 24px;
-  line-height: 29px;
-  display: flex;
-  align-items: center;
   color: #FFFFFF;
+  transition: all 0.2s ease-in-out;
 }
+
 
 /*-----------------------------------------------------------*/
 
@@ -80,6 +75,12 @@ header{
   border: 4px solid #FFFFFF;
   border-radius: 20px;
   background-color: #110019;
+  transition: all 1s ease-in;
+}
+
+.noticeboard__add:hover{
+  color: #52057B;
+  background: #FFFFFF;
 }
 
 
@@ -139,12 +140,130 @@ header{
 .edit{
   border: 2px solid #FFFFFF;
   color: #ffffff;
+  transition: all 0.5s;
+}
+
+.edit:hover{
+  background: #ffffff;
+  color: #52057B;
 }
 
 .delete{
   color: #FF4646;
   border: 2px solid #FF4646;
+  transition: all 0.5s;
+}
+.delete:hover{
+  color: #FFFFFF;
+  background: #FF4646;
 }
 
-/*--------------------------------------------*/
+/*------- стили для модалки -------------*/
 
+.modalWindow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.modalWindowContent{
+  position: relative;
+  padding: 20px 0;
+  width: 840px;
+  height: 697px;
+  margin: auto;
+  background: #52057B;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalWindow__title{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0 0 20px 0;
+}
+
+.modalWindow__form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+.modalWindow__form-inputTitle{
+  border: 4px solid #8E54B7;
+  border-radius: 10px;
+  background: #52057B;
+  padding: 30px 26px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  height: 89px;
+}
+
+.modalWindow__form-inputTitle:focus, .modalWindow__form-inputText:focus{
+  border: 4px solid #C186EB;
+}
+
+
+.modalWindow__form-inputTitle::placeholder, .modalWindow__form-inputText::placeholder{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #8E54B7;
+}
+
+.modalWindow__form-inputText{
+  width: 800px;
+  height: 400px;
+  border: 4px solid #8E54B7;
+  border-radius: 10px;
+  background: #52057B;
+  padding: 30px 26px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  resize: none;
+}
+
+.uil{
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 50px;
+  color: #8E54B7;
+  transition: all 1s;
+  width: 40px;
+  height: 40px;
+
+}
+
+.uil:hover{
+  color: #ffffff;
+}
+
+.modalWindow__button{
+  border: 4px solid #FFFFFF;
+  border-radius: 20px;
+  padding: 20px 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  margin: 0 auto;
+  background: none;
+  transition: all 1s;
+}
+
+.modalWindow__button:hover{
+  background: #ffffff;
+  color: #52057B;
+}

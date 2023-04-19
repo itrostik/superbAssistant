@@ -8,27 +8,25 @@
         content="ie=edge">
   <title>SuperbAssistant</title>
   <link rel="stylesheet" href="./style.css">
-
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
   <div class="wrapper">
     <header>
       <div class="header__container __container">
-        <div class="buttons">
-          <a href="#" class="button__link button">Журнал посещаемости</a>
-          <a href="./index.html" class="button__link button active">Доска объявлений</a>
-          <a href="./timetable.html" class="button__link button">Расписание</a>
-          <a href="./trainmaterial.html" class="button__link button">Учебные материалы</a>
-          <a href="./contact.html" class="button__link button">Контакты</a>
-          <a href="./profile.html" class="button__link button">Профиль</a>
-        </div>
+        <a href="#" class="header__link">Журнал посещаемости</a>
+        <a href="./index.html" class="header__link header__selected">Доска объявлений</a>
+        <a href="./timetable.html" class="header__link">Расписание</a>
+        <a href="./trainmaterial.html" class="header__link">Учебные материалы</a>
+        <a href="./contact.html" class="header__link">Контакты</a>
+        <a href="./profile.html" class="header__link">Профиль</a>
       </div>
     </header>
     <main>
       <div class="main__container __container">
         <div class="noticeboard">
             <a href="#" class="noticeboard__add">ДОБАВИТЬ НОВОЕ ОБЪЯВЛЕНИЕ</a>
-            <div class="noticeboard__infoblock">
+            <div class="noticeboard__infoblock" id="block1">
               <div class="noticeboard__infoblock-header">
                 <div class="noticeboard__infoblock-title">
                   Сделать тесты по истории
@@ -45,7 +43,7 @@
                    class="noticeboard__infoblock-button delete">УДАЛИТЬ</a>
               </div>
             </div>
-            <div class="noticeboard__infoblock">
+            <div class="noticeboard__infoblock" id="block2">
               <div class="noticeboard__infoblock-header">
                 <div class="noticeboard__infoblock-title">
                   Сделать тесты по истории
@@ -62,7 +60,7 @@
                    class="noticeboard__infoblock-button delete">УДАЛИТЬ</a>
               </div>
             </div>
-            <div class="noticeboard__infoblock">
+            <div class="noticeboard__infoblock" id="block3">
               <div class="noticeboard__infoblock-header">
                 <div class="noticeboard__infoblock-title">
                   Сделать тесты по истории
@@ -79,7 +77,7 @@
                    class="noticeboard__infoblock-button delete">УДАЛИТЬ</a>
               </div>
             </div>
-            <div class="noticeboard__infoblock">
+            <div class="noticeboard__infoblock" id="block4">
               <div class="noticeboard__infoblock-header">
                 <div class="noticeboard__infoblock-title">
                   Сделать тесты по истории
@@ -100,5 +98,7 @@
       </div>
     </main>
   </div>
+  <script src="header.js"></script>
+  <script src="modal.js"></script>
 </body>
 </html>
