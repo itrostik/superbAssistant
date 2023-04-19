@@ -108,7 +108,7 @@ function deleteBlock(ev){
 }
 
 
-//функционал кнопки "создать"
+//функционал кнопки "изменить"
 
 let buttonsEdit = document.querySelectorAll('.edit')
 
