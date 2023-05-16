@@ -15,7 +15,9 @@ $btn.addEventListener('click', openModal);
 function openModal() {
   document.querySelector('.modal__title').textContent = 'НОВЫЙ КОНТАКТ';
   document.querySelector('.modal__btn').value = "ДОБАВИТЬ";
+  document.querySelector('.modal__form').action = "/add_post";
   document.querySelector('.modal__input-name').value = '';
+  document.querySelector('.input__hidden').value = "";
   document.querySelector('.modal__lesson').value = '';
   document.querySelector('.modal__contact').value = '';
 
@@ -75,6 +77,8 @@ function openModalChange(e) {
   let parent = e.target.closest('.contact__cell');
   document.querySelector('.modal__title').textContent = 'ИЗМЕНИТЬ КОНТАКТ';
   document.querySelector('.modal__btn').value = "ИЗМЕНИТЬ";
+  document.querySelector('.modal__form').action = "/edit_post";
+  document.querySelector('.input__hidden').value = e.target.dataset.id;
   document.querySelector('.modal__input-name').value = parent.querySelector('.contact__title').textContent.trim();
   document.querySelector('.modal__lesson').value = parent.querySelector('.contact__text').textContent.trim();
   document.querySelector('.modal__contact').value = parent.querySelector('.contact__randomname').textContent.trim();

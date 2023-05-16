@@ -29,6 +29,7 @@ $btn.addEventListener('click', openModal);
 function openModal() {
   document.querySelector('.modal__input-name').value = '';
   modal.style.display = 'block';
+  document.querySelector('.modal__form').action = "/add_post";
   document.querySelector('body').style.overflowY = 'hidden';
   document.querySelector('.modal__btn').addEventListener('click', createLesson);
 
